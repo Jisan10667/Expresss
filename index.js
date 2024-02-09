@@ -4,6 +4,7 @@ const connection = require("./connection");
 const userRoute = require("./routes/user");
 const stationRoute = require("./routes/station");
 const trainRoute = require("./routes/train");
+
 // const categoryRoute = require("./routes/category");
 // const productRoute = require("./routes/product");
 //  const billRoute = require("./routes/bill");
@@ -21,7 +22,7 @@ app.use(
 
 app.use(express.json());
 
-app.use("/api/users", userRoute);
+app.use("/api", userRoute);
 app.use("/api/stations", stationRoute);
 app.use("/api/trains", trainRoute);
 // app.use("/category", categoryRoute);
